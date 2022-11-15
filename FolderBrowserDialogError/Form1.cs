@@ -21,7 +21,13 @@ namespace FolderBrowserDialogError
         {
             DialogResult result = folderBrowserDialog1.ShowDialog(this);
             if (result == DialogResult.OK) textBox1.Text = folderBrowserDialog1.SelectedPath;
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer;
+            DialogResult result = folderBrowserDialog1.ShowDialog(this);
+            if (result == DialogResult.OK) textBox1.Text = folderBrowserDialog1.SelectedPath;
         }
     }
 }
